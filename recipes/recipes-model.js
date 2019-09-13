@@ -20,7 +20,8 @@ function getShoppingList(recipe_id) {
     .select(
       'recipe_ingredients.ingredient_id', 
       'recipes.name as recipe_name', 
-      'ingredients.name as ingredient_name')
+      'ingredients.name as ingredient_name'
+      )
     .where({recipe_id: recipe_id})
     .then(shopping => {
       return shopping
@@ -28,5 +29,18 @@ function getShoppingList(recipe_id) {
 }
 
 function getInstructions(recipe_id) {
-
+  return db('instructions as i')
+    .join('recipes as r', 'i.recipe_id', '=', 'r.id')
+    .select(
+      'i.recipe_id', 
+      'r.name as recipe_name', 
+      'i.step_id', 
+      'i.name as instruction', 
+      'i.prep_time'
+      )
+    .where({recipe_id: recipe_id})
+    .orderBy('i.step_id')
+    .then(instructions => {
+      return instructions
+    })
 }
