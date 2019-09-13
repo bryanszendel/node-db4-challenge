@@ -5,7 +5,7 @@
 - [X] database modeling.
 - [X] migration scripts.
 - [X] seeding.
-- knex.
+- [X] knex.
 
 ## Assignment
 
@@ -32,7 +32,7 @@ In addition to the `migrations` and `seeding` scripts, write a data access file 
 
 - [X] `getRecipes()`: should return a list of all recipes in the database.
 - [X] `getShoppingList(recipe_id)`: should return a list of all ingredients and quantities for a given recipe
-- `getInstructions(recipe_id)`: should return a list of step by step instructions for preparing a recipe
+- [X] `getInstructions(recipe_id)`: should return a list of step by step instructions for preparing a recipe
 
 Organize and name your files anyway you see fit.
 
@@ -42,5 +42,7 @@ Build the following endpoints. Write any additional data access helpers as neede
 
 - [X] `GET /api/recipes/`: all recipes (without details about ingredients or steps)
 - [X] `GET /api/recipes/:id/shoppingList`: a list of ingredients and quantites for a single recipe
-- `GET /api/recipes/:id/instructions`: a correctly ordered list of how to prepare a single recipe
-- `GET /api/ingredients/:id/recipes`: all recipes in the system that utilize a single ingredient 
+- [X] `GET /api/recipes/:id/instructions`: a correctly ordered list of how to prepare a single recipe
+- [X] `GET /api/ingredients/:id/recipes`: all recipes in the system that utilize a single ingredient 
+
+MVP AND STRETCH GOALS COMPLETE
